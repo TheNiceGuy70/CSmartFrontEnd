@@ -1,0 +1,10 @@
+.left-alignment{
+  margin-left: 200px;
+}
+
+.backgroundColor {
+  background-color: blanchedalmond;
+  background-repeat: repeat;
+  height: 100vh;
+  width: 100vw;
+}
