@@ -8,7 +8,7 @@ import {Provider} from "../interface/provider";
 })
 export class ProviderService
 {
-  private url = "server/provider";
+  private url = "/server/provider";
 
   httpOptions = {
     headers: new HttpHeaders({
