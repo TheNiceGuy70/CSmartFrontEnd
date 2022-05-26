@@ -19,6 +19,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './component/home/home.component';
 import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { WorkingpointNewComponent } from './component/workingpoint-new/workingpoint-new.component';
+import { WorkingpointUpdateComponent } from './component/workingpoint-update/workingpoint-update.component';
+import { InvoiceinNewComponent } from './component/invoicein-new/invoicein-new.component';
+import { InvoiceinUpdateComponent } from './component/invoicein-update/invoicein-update.component';
+import { InvoiceoutNewComponent } from './component/invoiceout-new/invoiceout-new.component';
+import { InvoiceoutUpdateComponent } from './component/invoiceout-update/invoiceout-update.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +41,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ProviderUpdate,
     WorkingpointComponent,
     InvoiceinComponent,
-    InvoiceoutComponent
+    InvoiceoutComponent,
+    WorkingpointNewComponent,
+    WorkingpointUpdateComponent,
+    InvoiceinNewComponent,
+    InvoiceinUpdateComponent,
+    InvoiceoutNewComponent,
+    InvoiceoutUpdateComponent
   ],
   imports: [
     BrowserModule,
