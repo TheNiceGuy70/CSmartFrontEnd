@@ -1,5 +1,5 @@
-<div id="perfectMargin" style="font-size: 16px; width: 500px">
-  <button type="button" class="btn btn-primary" routerLink="/employees">
+<div class="container">
+  <button type="button" class="btn btn-primary action" routerLink="/employees">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left"
          viewBox="0 0 16 16" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
       <path fill-rule="evenodd"
@@ -11,7 +11,7 @@
   </button>
   <br/>
   <br/>
-  <div id="addNewEmployee" class="container">
+  <div>
     <form [formGroup]="employeeForm" (ngSubmit)="submitEmployee()">
       <div *ngIf="formMessage !=''">
         <p class="alert alert-info" role="alert">{{formMessage}}</p>
