@@ -8,9 +8,9 @@ describe('InvoiceinUpdateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InvoiceinUpdateComponent ]
+      declarations: [InvoiceinUpdateComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

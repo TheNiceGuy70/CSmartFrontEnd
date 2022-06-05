@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Provider} from "../../interface/provider";
-import {ProviderService} from "../../service/provider.service";
+import { Provider } from "../../interface/provider";
+import { ProviderService } from "../../service/provider.service";
 
 @Component({
   selector: 'app-provider',
@@ -13,18 +13,15 @@ export class ProviderComponent implements OnInit {
   constructor(public providerService: ProviderService) {
   }
 
-  ngOnInit(): void
-  {
+  ngOnInit(): void {
     this.providerService.getAllProviders().subscribe({
       next: providers => this.providerList = providers,
       error: err => console.error(err)
     });
   }
 
-  deleteProvider(id:any)
-  {
-    this.providerService.deleteProvider(id).subscribe(()=>
-    {
+  deleteProvider(id: any) {
+    this.providerService.deleteProvider(id).subscribe(() => {
       window.location.reload();
     });
   }

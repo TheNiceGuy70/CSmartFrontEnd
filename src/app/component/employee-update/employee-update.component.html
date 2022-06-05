@@ -1,121 +1,140 @@
 <div class="container">
-  <button type="button" class="btn btn-primary" routerLink="/employees">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left"
-         viewBox="0 0 16 16" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
-      <path fill-rule="evenodd"
-            d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"></path>
-      <path fill-rule="evenodd"
-            d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"></path>
-    </svg>
-    Back
-  </button>
-  <br/>
-  <br/>
-  <div>
-    <form [formGroup]="employeeForm" (ngSubmit)="sendUpdateEmployeeRequest()">
-      <div *ngIf="formMessage !=''">
-        <p class="alert alert-info" role="alert">{{formMessage}}</p>
-      </div>
-      <div class="text-white fw-bold d-print-inline-block bg-dark rounded-3">
-        <div class="row" style="margin: 0px">
-          <div id="columnGeneralInformations" class="col d-print-inline-block rounded-3 border-white bg-dark">
-            <h4 class="text-white">Employee general informations:</h4>
-            <label for="firstName" class="form-label">First Name</label>
-            <input type="text" id="firstName" formControlName="firstName" [(ngModel)]="employee.firstName"
-                   class="form-control" aria-describedby="firstName" required/>
+       <button type="button" class="btn btn-primary" routerLink="/employees">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                     class="bi bi-box-arrow-left" viewBox="0 0 16 16" data-darkreader-inline-fill=""
+                     style="--darkreader-inline-fill:currentColor;">
+                     <path fill-rule="evenodd"
+                            d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z">
+                     </path>
+                     <path fill-rule="evenodd"
+                            d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z">
+                     </path>
+              </svg>
+              Back
+       </button>
+       <br />
+       <br />
+       <div>
+              <form [formGroup]="employeeForm" (ngSubmit)="sendUpdateEmployeeRequest()">
+                     <div *ngIf="formMessage !=''">
+                            <p class="alert alert-info" role="alert">{{formMessage}}</p>
+                     </div>
+                     <div class="text-white fw-bold d-print-inline-block bg-dark rounded-3">
+                            <div class="row" style="margin: 0px">
+                                   <div id="columnGeneralInformations"
+                                          class="col d-print-inline-block rounded-3 border-white bg-dark">
+                                          <h4 class="text-white">Employee general informations:</h4>
+                                          <label for="firstName" class="form-label">First Name</label>
+                                          <input type="text" id="firstName" formControlName="firstName"
+                                                 [(ngModel)]="employee.firstName" class="form-control"
+                                                 aria-describedby="firstName" required />
 
-            <label for="lastName" class="form-label">Last name</label>
-            <input type="text" id="lastName" formControlName="lastName" [(ngModel)]="employee.lastName"
-                   class="form-control" aria-describedby="lastName" required/>
+                                          <label for="lastName" class="form-label">Last name</label>
+                                          <input type="text" id="lastName" formControlName="lastName"
+                                                 [(ngModel)]="employee.lastName" class="form-control"
+                                                 aria-describedby="lastName" required />
 
-            <label for="cnp" class="form-label">CNP</label>
-            <input type="text" id="cnp" formControlName="cnp" [(ngModel)]="employee.cnp" class="form-control"
-                   aria-describedby="cnp" required/>
+                                          <label for="cnp" class="form-label">CNP</label>
+                                          <input type="text" id="cnp" formControlName="cnp" [(ngModel)]="employee.cnp"
+                                                 class="form-control" aria-describedby="cnp" required />
 
-            <label for="role" class="form-label">Role</label>
-            <input type="text" id="role" formControlName="role" [(ngModel)]="employee.role" class="form-control"
-                   aria-describedby="role" required/>
+                                          <label for="role" class="form-label">Role</label>
+                                          <input type="text" id="role" formControlName="role"
+                                                 [(ngModel)]="employee.role" class="form-control"
+                                                 aria-describedby="role" required />
 
-            <label for="studies" class="form-label">Studies</label>
-            <input type="text" id="studies" formControlName="studies" [(ngModel)]="employee.studies"
-                   class="form-control"
-                   aria-describedby="studies" required/>
+                                          <label for="studies" class="form-label">Studies</label>
+                                          <input type="text" id="studies" formControlName="studies"
+                                                 [(ngModel)]="employee.studies" class="form-control"
+                                                 aria-describedby="studies" required />
 
-            <label for="employmentDate" class="form-label">Employment Date</label>
-            <input type="text" id="employmentDate" formControlName="employmentDate"
-                   [(ngModel)]="employee.employmentDate"
-                   class="form-control" aria-describedby="employmentDate" required/>
-          </div>
+                                          <label for="employmentDate" class="form-label">Employment Date</label>
+                                          <input type="text" id="employmentDate" formControlName="employmentDate"
+                                                 [(ngModel)]="employee.employmentDate" class="form-control"
+                                                 aria-describedby="employmentDate" required />
+                                   </div>
 
-          <div id="columnAddressInformations" class="col d-print-inline-block rounded-3 border-white bg-dark">
-            <h4 class="text-white">Employee address:</h4>
-            <label for="county" class="form-label">County</label>
-            <input type="text" id="county" formControlName="county" [(ngModel)]="employee.address.county" class="form-control"
-                   aria-describedby="county" required/>
+                                   <div id="columnAddressInformations"
+                                          class="col d-print-inline-block rounded-3 border-white bg-dark">
+                                          <h4 class="text-white">Employee address:</h4>
+                                          <label for="county" class="form-label">County</label>
+                                          <input type="text" id="county" formControlName="county"
+                                                 [(ngModel)]="employee.address.county" class="form-control"
+                                                 aria-describedby="county" required />
 
-            <label for="locality" class="form-label">Locality</label>
-            <input type="text" id="locality" formControlName="locality" [(ngModel)]="employee.address.locality"
-                   class="form-control"
-                   aria-describedby="locality" required/>
+                                          <label for="locality" class="form-label">Locality</label>
+                                          <input type="text" id="locality" formControlName="locality"
+                                                 [(ngModel)]="employee.address.locality" class="form-control"
+                                                 aria-describedby="locality" required />
 
-            <label for="street" class="form-label">Street</label>
-            <input type="text" id="street" formControlName="street" [(ngModel)]="employee.address.street" class="form-control"
-                   aria-describedby="street" required/>
+                                          <label for="street" class="form-label">Street</label>
+                                          <input type="text" id="street" formControlName="street"
+                                                 [(ngModel)]="employee.address.street" class="form-control"
+                                                 aria-describedby="street" required />
 
-            <label for="streetNumber" class="form-label">Street Number</label>
-            <input type="text" id="streetNumber" formControlName="streetNumber" [(ngModel)]="employee.address.streetNumber"
-                   class="form-control" aria-describedby="streetNumber" required/>
+                                          <label for="streetNumber" class="form-label">Street Number</label>
+                                          <input type="text" id="streetNumber" formControlName="streetNumber"
+                                                 [(ngModel)]="employee.address.streetNumber" class="form-control"
+                                                 aria-describedby="streetNumber" required />
 
-            <label for="blockNumber" class="form-label">Block Number</label>
-            <input type="text" id="blockNumber" formControlName="blockNumber" [(ngModel)]="employee.address.blockNumber"
-                   class="form-control" aria-describedby="blockNumber" required/>
+                                          <label for="blockNumber" class="form-label">Block Number</label>
+                                          <input type="text" id="blockNumber" formControlName="blockNumber"
+                                                 [(ngModel)]="employee.address.blockNumber" class="form-control"
+                                                 aria-describedby="blockNumber" required />
 
-            <label for="stairNumber" class="form-label">Stair Number</label>
-            <input type="text" id="stairNumber" formControlName="stairNumber" [(ngModel)]="employee.address.stairNumber"
-                   class="form-control" aria-describedby="stairNumber" required/>
+                                          <label for="stairNumber" class="form-label">Stair Number</label>
+                                          <input type="text" id="stairNumber" formControlName="stairNumber"
+                                                 [(ngModel)]="employee.address.stairNumber" class="form-control"
+                                                 aria-describedby="stairNumber" required />
 
-            <label for="floor" class="form-label">Floor</label>
-            <input type="text" id="floor" formControlName="floor" [(ngModel)]="employee.address.floor" class="form-control"
-                   aria-describedby="floor" required/>
+                                          <label for="floor" class="form-label">Floor</label>
+                                          <input type="text" id="floor" formControlName="floor"
+                                                 [(ngModel)]="employee.address.floor" class="form-control"
+                                                 aria-describedby="floor" required />
 
-            <label for="apartmentNumber" class="form-label">Apartment Number</label>
-            <input type="text" id="apartmentNumber" formControlName="apartmentNumber"
-                   [(ngModel)]="employee.address.apartmentNumber"
-                   class="form-control" aria-describedby="apartmentNumber" required/>
-          </div>
+                                          <label for="apartmentNumber" class="form-label">Apartment Number</label>
+                                          <input type="text" id="apartmentNumber" formControlName="apartmentNumber"
+                                                 [(ngModel)]="employee.address.apartmentNumber" class="form-control"
+                                                 aria-describedby="apartmentNumber" required />
+                                   </div>
 
-          <div id="columnContractInformations"
-               class="col d-print-inline-block d-print-inline-block rounded-3 border-white bg-dark">
-            <h4 class="text-white">Employee contract informations:</h4>
-            <label for="contractType" class="form-label">Contract Type</label>
-            <input type="text" id="contractType" formControlName="contractType" [(ngModel)]="employee.contract.contractType"
-                   class="form-control" aria-describedby="contractType" required/>
+                                   <div id="columnContractInformations"
+                                          class="col d-print-inline-block d-print-inline-block rounded-3 border-white bg-dark">
+                                          <h4 class="text-white">Employee contract informations:</h4>
+                                          <label for="contractType" class="form-label">Contract Type</label>
+                                          <input type="text" id="contractType" formControlName="contractType"
+                                                 [(ngModel)]="employee.contract.contractType" class="form-control"
+                                                 aria-describedby="contractType" required />
 
-            <label for="workHoursPerDay" class="form-label">WorkHours Per Day</label>
-            <input type="text" id="workHoursPerDay" formControlName="workHoursPerDay"
-                   [(ngModel)]="employee.contract.workHoursPerDay" class="form-control" aria-describedby="workHoursPerDay"
-                   required/>
+                                          <label for="workHoursPerDay" class="form-label">WorkHours Per Day</label>
+                                          <input type="text" id="workHoursPerDay" formControlName="workHoursPerDay"
+                                                 [(ngModel)]="employee.contract.workHoursPerDay" class="form-control"
+                                                 aria-describedby="workHoursPerDay" required />
 
-            <label for="legalDaysOff" class="form-label">Legal Days Off</label>
-            <input type="text" id="legalDaysOff" formControlName="legalDaysOff" [(ngModel)]="employee.contract.legalDaysOff"
-                   class="form-control" aria-describedby="legalDaysOff" required/>
+                                          <label for="legalDaysOff" class="form-label">Legal Days Off</label>
+                                          <input type="text" id="legalDaysOff" formControlName="legalDaysOff"
+                                                 [(ngModel)]="employee.contract.legalDaysOff" class="form-control"
+                                                 aria-describedby="legalDaysOff" required />
 
-            <label for="brutSalary" class="form-label">Brut Salary</label>
-            <input type="text" id="brutSalary" formControlName="brutSalary" [(ngModel)]="employee.contract.brutSalary"
-                   class="form-control" aria-describedby="brutSalary" required/>
-          </div>
+                                          <label for="brutSalary" class="form-label">Brut Salary</label>
+                                          <input type="text" id="brutSalary" formControlName="brutSalary"
+                                                 [(ngModel)]="employee.contract.brutSalary" class="form-control"
+                                                 aria-describedby="brutSalary" required />
+                                   </div>
 
-          <br/>
-        </div>
-        <button type="button" class="btn btn-success" (click)="sendUpdateEmployeeRequest()"
-                style="margin-left: 20px; margin-bottom: 20px">Update employee
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save"
-               viewBox="0 0 16 16" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
-            <path
-              d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"></path>
-          </svg>
-        </button>
-      </div>
-    </form>
-  </div>
+                                   <br />
+                            </div>
+                            <button type="button" class="btn btn-success" (click)="sendUpdateEmployeeRequest()"
+                                   style="margin-left: 20px; margin-bottom: 20px">Update employee
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                          class="bi bi-save" viewBox="0 0 16 16" data-darkreader-inline-fill=""
+                                          style="--darkreader-inline-fill:currentColor;">
+                                          <path
+                                                 d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z">
+                                          </path>
+                                   </svg>
+                            </button>
+                     </div>
+              </form>
+       </div>
 </div>

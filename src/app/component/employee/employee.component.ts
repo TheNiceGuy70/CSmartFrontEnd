@@ -7,24 +7,20 @@ import { Employee } from "../../interface/employee";
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css']
 })
-export class EmployeeComponent implements OnInit
-{
+export class EmployeeComponent implements OnInit {
   employeeList: Employee[] = [];
 
   constructor(public employeeService: EmployeeService) { }
 
-  ngOnInit(): void
-  {
+  ngOnInit(): void {
     this.employeeService.getAllEmployees().subscribe({
       next: employees => this.employeeList = employees,
       error: err => console.error(err)
     });
   }
 
-  deleteEmployee(id:any)
-  {
-    this.employeeService.deleteEmployee(id).subscribe(()=>
-    {
+  deleteEmployee(id: any) {
+    this.employeeService.deleteEmployee(id).subscribe(() => {
       window.location.reload();
     });
   }
