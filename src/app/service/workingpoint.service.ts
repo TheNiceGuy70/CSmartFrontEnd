@@ -8,7 +8,7 @@ import { WorkingPoint } from "../interface/workingpoint";
   })
   export class WorkingPointService
   {
-    private url = "/server/provider";
+    private url = "/server/workingPoint";
   
     httpOptions = {
       headers: new HttpHeaders({
@@ -24,14 +24,14 @@ import { WorkingPoint } from "../interface/workingpoint";
   
     getWorkingPointByCnp(cnp:string):Observable<WorkingPoint> { return this.httpClient.get<WorkingPoint>(this.url + '/find/' + cnp); }
   
-    addNewWorkingPoint(provider: WorkingPoint):Observable<WorkingPoint>
+    addNewWorkingPoint(workingPoint: WorkingPoint):Observable<WorkingPoint>
     {
-      console.log(provider);
-      return this.httpClient.post<WorkingPoint>(this.url + '/save', JSON.stringify(provider), this.httpOptions);
+      console.log(workingPoint);
+      return this.httpClient.post<WorkingPoint>(this.url + '/save', JSON.stringify(workingPoint), this.httpOptions);
     }
   
-    updateWorkingPoint(id:any, provider:any):Observable<WorkingPoint>{
-      return this.httpClient.put<WorkingPoint>(this.url+ '/update/' + id, JSON.stringify(provider),this.httpOptions);
+    updateWorkingPoint(id:any, workingPoint:any):Observable<WorkingPoint>{
+      return this.httpClient.put<WorkingPoint>(this.url+ '/update/' + id, JSON.stringify(workingPoint),this.httpOptions);
     }
   
     deleteWorkingPoint(id:any):Observable<WorkingPoint> { return this.httpClient.delete<WorkingPoint>(this.url+'/delete/'+id,this.httpOptions); }

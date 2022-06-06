@@ -1,7 +1,6 @@
-import {Address} from "./address";
+import { Address } from "./address";
 
-export interface WorkingPoint
-{
+export interface WorkingPoint {
   workingPointId: string;
   fiscalCode: string;
   address: Address;

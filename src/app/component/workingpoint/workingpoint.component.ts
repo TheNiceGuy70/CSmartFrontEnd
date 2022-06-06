@@ -7,7 +7,7 @@ import { WorkingPoint } from 'src/app/interface/workingpoint';
   templateUrl: './workingpoint.component.html',
   styleUrls: ['./workingpoint.component.css']
 })
-export class WorkingpointComponent implements OnInit {
+export class WorkingPointComponent implements OnInit {
   workingPointList: WorkingPoint[] = [];
 
   constructor(public workingPointService: WorkingPointService) { }

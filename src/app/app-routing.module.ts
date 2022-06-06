@@ -4,10 +4,13 @@ import { HomeComponent } from './component/home/home.component';
 import { EmployeeNewComponent } from './component/employee-new/employee-new.component';
 import { EmployeeComponent } from './component/employee/employee.component';
 import { EmployeeUpdateComponent } from './component/employee-update/employee-update.component';
-import {ProviderComponent} from "./component/provider/provider.component";
-import {ProviderNewComponent} from "./component/provider-new/provider-new.component";
-import {ProviderUpdate} from "./component/provider-update/provider-update.component";
-import {InvoiceinComponent} from "./component/invoicein/invoicein.component";
+import { ProviderComponent} from "./component/provider/provider.component";
+import { ProviderNewComponent} from "./component/provider-new/provider-new.component";
+import { ProviderUpdate} from "./component/provider-update/provider-update.component";
+import { InvoiceInComponent} from "./component/invoicein/invoicein.component";
+import { WorkingPointComponent } from './component/workingpoint/workingpoint.component';
+import { WorkingPointNewComponent } from './component/workingpoint-new/workingpoint-new.component';
+import { WorkingPointUpdateComponent } from './component/workingpoint-update/workingpoint-update.component';
 
 const routes: Routes = [
   {
@@ -29,7 +32,7 @@ const routes: Routes = [
 
   {
     path:'invoiceIns',
-    component:InvoiceinComponent
+    component:InvoiceInComponent
   },
 
   {
@@ -43,6 +46,19 @@ const routes: Routes = [
   {
     path:'editProvider/:providerId',
     component:ProviderUpdate
+  },
+
+  {
+    path:'workingPoints',
+    component:WorkingPointComponent
+  },
+  {
+    path:'newWorkingPoint',
+    component:WorkingPointNewComponent
+  },
+  {
+    path:'editWorkingPoint/:workingPointId',
+    component:WorkingPointUpdateComponent
   },
 ];
 

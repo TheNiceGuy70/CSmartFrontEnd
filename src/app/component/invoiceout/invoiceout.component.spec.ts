@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InvoiceoutComponent } from './invoiceout.component';
+import { InvoiceOutComponent } from './invoiceout.component';
 
 describe('InvoiceoutComponent', () => {
   let component: InvoiceoutComponent;

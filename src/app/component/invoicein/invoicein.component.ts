@@ -7,7 +7,7 @@ import { InvoiceInService } from "../../service/invoicein.service";
   templateUrl: './invoicein.component.html',
   styleUrls: ['./invoicein.component.css']
 })
-export class InvoiceinComponent implements OnInit {
+export class InvoiceInComponent implements OnInit {
   invoiceInList: InvoiceIn[] = [];
 
   constructor(public invoiceInService: InvoiceInService) { }
